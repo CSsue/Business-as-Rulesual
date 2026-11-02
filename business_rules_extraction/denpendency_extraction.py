@@ -13,23 +13,28 @@ load_dotenv()
 
 CONFIG = {
     # Input Excel file containing the dependency analysis prompts
-    "INPUT_FILE": "",
+    # "INPUT_FILE": "",
     
     # Column name in the input Excel that contains the actual prompt text
-    "PROMPT_COL": "",
+    # "PROMPT_COL": "",
     
     # Output file path for results
-    "OUTPUT_FILE": "",
+    # "OUTPUT_FILE": "",
     
     # Model identifier
-    "MODEL_NAME": "",
+    # "MODEL_NAME": "",
+
+    "INPUT_FILE": "results.xlsx",
+    "OUTPUT_FILE": "dependency_results.xlsx",
+    "PROMPT_COL": "prompt",
+    "MODEL_NAME": "deepseek-flash",
     
     # API Key from environment variables
     "API_KEY": os.getenv("DASHSCOPE_API_KEY"),
     
     # Base URL for the API service
-    "BASE_URL": "https://dashscope.aliyuncs.com/compatible-mode/v1",
-    
+    # "BASE_URL": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+    "BASE_URL": "https://api.deepseek.com",
     # Sampling temperature (lower = more deterministic)
     "TEMPERATURE": 0.01,
     

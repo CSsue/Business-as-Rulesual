@@ -14,22 +14,29 @@ load_dotenv()
 
 CONFIG = {
     # Path to the input Excel file containing prompts
-    "INPUT_FILE": "",
+    # "INPUT_FILE": "",
     
     # Path where the extraction results will be saved
-    "OUTPUT_FILE": "",
+    # "OUTPUT_FILE": "",
     
     # The specific column name in the Excel file that contains the prompts
-    "PROMPT_COL": "",
+    # "PROMPT_COL": "",
     
     # The model identifier to be used for API calls
-    "MODEL_NAME": "",
+    # "MODEL_NAME": "",
+
+    "INPUT_FILE": "business_rules.xlsx",
+    "OUTPUT_FILE": "business_rules_results.xlsx",
+    "PROMPT_COL": "prompt",
+    
+    "MODEL_NAME": "deepseek-flash",
     
     # API Key retrieved securely from environment variables
     "API_KEY": os.getenv("DASHSCOPE_API_KEY"),
     
     # The base URL for the API endpoint (e.g., for Alibaba DashScope/DeepSeek)
-    "BASE_URL": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+    # "BASE_URL": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+    "BASE_URL": "https://api.deepseek.com",
     
     # Sampling temperature: lower values (e.g., 0.01) make output more deterministic
     "TEMPERATURE": 0.01,
